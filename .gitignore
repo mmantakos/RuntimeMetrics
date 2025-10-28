@@ -1,0 +1,33 @@
+# Composer vendor directory
+/vendor/
+
+# Composer lock file if you want to allow it to be regenerated (optional)
+/composer.lock
+
+# PhpStorm project files
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and caches
+/logs/
+*.log
+/tmp/
+*.cache
+
+# PHPUnit result cache
+.phpunit.result.cache
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# Optional: node modules if you use frontend tools
+/node_modules/
+
+playground.php
+build

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="vendor/autoload.php" colors="true">
+
+    <testsuites>
+        <testsuite name="RuntimeMetrics Test Suite">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+
+    <coverage>
+        <include>
+            <directory suffix=".php">src</directory>
+        </include>
+        <exclude>
+            <directory>tests</directory>
+        </exclude>
+
+        <report>
+            <clover outputFile="build/logs/clover.xml"/>
+            <html outputDirectory="build/coverage-html"/>
+            <text outputFile="php://stdout"/>
+        </report>
+    </coverage>
+
+</phpunit>

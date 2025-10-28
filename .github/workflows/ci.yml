@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php: ['8.1', '8.2', '8.3']
+
+    steps:
+      # 1️⃣ Checkout repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2️⃣ Set up PHP
+      - name: Set up PHP ${{ matrix.php }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: mbstring
+          coverage: xdebug
+
+      # 3️⃣ Validate composer.json
+      - name: Validate composer.json
+        run: composer validate --strict
+
+      # 4️⃣ Install dependencies
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      # 5️⃣ Run PHPUnit with coverage
+      - name: Run tests with coverage
+        run: |
+          mkdir -p build/logs
+          export XDEBUG_MODE=coverage
+          vendor/bin/phpunit --coverage-clover build/logs/clover.xml --colors=always --debug
+
+      # 6️⃣ Upload coverage to Codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: build/logs/clover.xml
+          fail_ci_if_error: true
