@@ -1,10 +1,10 @@
 # RuntimeMetrics
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/manoliscode/runtime-metrics.svg?style=flat-square)](https://packagist.org/packages/manoliscode/runtime-metrics)
-[![PHP Version](https://img.shields.io/packagist/php-v/manoliscode/runtime-metrics.svg?style=flat-square)](https://packagist.org/packages/manoliscode/runtime-metrics)
-[![CI](https://github.com/ManolisCode/RuntimeMetrics/workflows/CI/badge.svg)](https://github.com/ManolisCode/RuntimeMetrics/actions)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/mmantakos/runtime-metrics.svg?style=flat-square)](https://packagist.org/packages/mmantakos/runtime-metrics)
+[![PHP Version](https://img.shields.io/packagist/php-v/mmantakos/runtime-metrics.svg?style=flat-square)](https://packagist.org/packages/mmantakos/runtime-metrics)
+[![CI](https://github.com/mmantakos/RuntimeMetrics/workflows/CI/badge.svg)](https://github.com/mmantakos/RuntimeMetrics/actions)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![codecov](https://codecov.io/gh/ManolisCode/RuntimeMetrics/branch/main/graph/badge.svg?token=RJMYG1E1P0)](https://codecov.io/gh/ManolisCode/RuntimeMetrics)
+[![codecov](https://codecov.io/gh/mmantakos/RuntimeMetrics/branch/main/graph/badge.svg?token=RJMYG1E1P0)](https://codecov.io/gh/mmantakos/RuntimeMetrics)
 ---
 ## Synopsis
 A lightweight PHP library for tracking **execution time** and **memory usage** of your code, with multiple named timers, lap support, human-readable reports, and JSON export. Perfect for benchmarking, profiling, and performance monitoring.
@@ -28,7 +28,7 @@ A lightweight PHP library for tracking **execution time** and **memory usage** o
 Install via Composer:
 
 ```bash
-composer require manoliscode/runtime-metrics
+composer require mmantakos/runtime-metrics
 ```
 ---
 
@@ -36,7 +36,7 @@ composer require manoliscode/runtime-metrics
 ```
 <?php
 
-use ManolisCode\RuntimeMetrics\RuntimeMetrics;
+use mmantakos\RuntimeMetrics\RuntimeMetrics;
 
 $metrics = new RuntimeMetrics();
 

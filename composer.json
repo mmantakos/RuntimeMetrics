@@ -1,5 +1,5 @@
 {
-    "name": "manoliscode/runtime-metrics",
+    "name": "mmantakos/runtime-metrics",
     "description": "RuntimeMetrics helps you track execution time and performance metrics in PHP, an easy foundation for benchmarking your applications.",
     "type": "library",
     "license": "MIT",
@@ -11,7 +11,7 @@
     "minimum-stability": "stable",
     "autoload": {
     "psr-4": {
-      "ManolisCode\\RuntimeMetrics\\": "src/"
+      "mmantakos\\RuntimeMetrics\\": "src/"
     }
   },
     "require-dev": {

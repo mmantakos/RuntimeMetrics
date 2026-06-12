@@ -1,6 +1,6 @@
 <?php
 
-namespace ManolisCode\RuntimeMetrics;
+namespace mmantakos\RuntimeMetrics;
 
 /**
  * RuntimeMetrics

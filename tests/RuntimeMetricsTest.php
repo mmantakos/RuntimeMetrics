@@ -1,6 +1,6 @@
 <?php
 
-use ManolisCode\RuntimeMetrics\RuntimeMetrics;
+use mmantakos\RuntimeMetrics\RuntimeMetrics;
 use PHPUnit\Framework\TestCase;
 
 class RuntimeMetricsTest extends TestCase
